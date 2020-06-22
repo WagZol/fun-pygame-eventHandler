@@ -1,7 +1,7 @@
 Az events.py modul segítségével speciális körülmények közt létrejövő eseménykere reagálhatunk egy-egy funkcióval.
 
 
-##Főbb funkciók:
+## Főbb funkciók:
 
 *	Feliratkozás eseményekre annak körülményei meghatározásával
 *	Leiratkozás eseménykről
@@ -12,11 +12,11 @@ Az events.py modul segítségével speciális körülmények közt létrejövő 
 
 ---
 
-##Használat
+## Használat
 
 *	A használathoz másoljuk be az events.py-t a projektünk gyökérkönyvtárába
 *	Iratkozzunk fel egy eseményre, megadva azokat a körülményeket amikre szeretnék ha az általunk meghatározott reakció(reagáló function) működésbe lépjen
-```python
+```
 	EventHandlerContext.addKeyDownEventHandler(key=115, mod=64, handlerFunction=lambda event: print("save..."))
 ```
 *	Hozzunk létre egy "main" loop-ot(végtelen while ciklus)
@@ -26,7 +26,7 @@ Az events.py modul segítségével speciális körülmények közt létrejövő 
 		events.observeEvents()
 ```	
 
-##Érdemes tudni
+## Érdemes tudni
 
 *	A reakciók(reagáló function) paraméterben egy dict-et kell hogy várjon(ez az "elkapott" esemény körülményeit tartalmazza, hogy a reakcióban felhasználhassuk azokat) és nem lehet visszatérési értéket
 *	Eseményre az előre meghatározott esemény hozzáadó funkcióval reisztrálhatunk(EventhandlerContext.add[eseménynév]EventHandler) vagy egy általános eseményhozzáadó function-el ami paraméterben várja a kondíciókat dict típusként, amik esetén szeretnénk a reakciónkat végrehajtani
